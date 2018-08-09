@@ -1,0 +1,6 @@
+server:
+  port: 8082
+
+rmi:
+  server-url: 127.0.0.1
+  server-port: 1111
