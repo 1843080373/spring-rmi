@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: spring-boot-rmi-client
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Administrator
+Built-By: huangjian
 Implementation-Vendor-Id: com.boot
 Build-Jdk: 1.8.0_131
 Implementation-URL: http://maven.apache.org

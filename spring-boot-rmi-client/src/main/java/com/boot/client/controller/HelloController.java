@@ -1,6 +1,7 @@
 package com.boot.client.controller;
 
 import java.rmi.RemoteException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,14 +19,13 @@ public class HelloController {
 
 	@Autowired
 	private HelloRemoteService helloRemoteService;
-	
+
 	@Autowired
 	private OrderRemoteService orderRemoteService;
-	
+
 	@Autowired
 	private UserRemoteService userRemoteService;
-	
-	
+
 	@GetMapping("/hello/{name}")
 	public String hello(@PathVariable("name") String name) {
 		try {
@@ -39,14 +39,16 @@ public class HelloController {
 		}
 		return null;
 	}
-	
+
+	@GetMapping("/list")
+	public ResponseEntity<List<UserVO>> list() {
+		return ResponseEntity.ok(userRemoteService.list());
+	}
+
 	@GetMapping("/user")
-	public ResponseEntity<String> user() {
-		UserVO user =new UserVO()
-				.setPassword("1")
-				.setPhone("2")
-				.setUserName("3");
-		userRemoteService.save(user);
-		return ResponseEntity.ok("请求成功!");
+	public ResponseEntity<UserVO> user() {
+		UserVO user = new UserVO().setPassword("124444").setPhone("18744747").setUserName("张三");
+		user = userRemoteService.save(user);
+		return ResponseEntity.ok(user);
 	}
 }

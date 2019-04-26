@@ -2,6 +2,7 @@ package com.zimadai.boot.mapper;
 
 import java.util.List;
 
+import com.boot.rmi.vo.UserVO;
 import com.zimadai.boot.bean.User;
 
 public interface UserMapper {
@@ -18,4 +19,6 @@ public interface UserMapper {
     int updateByPrimaryKey(User record);
     
     List<User> selectAllUser();
+
+	List<UserVO> list();
 }
