@@ -21,7 +21,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.rmi</groupId>
-			<artifactId>boot-rmi-provider-starter</artifactId>
+			<artifactId>spring-boot-rmi-provider-starter</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

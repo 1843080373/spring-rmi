@@ -11,7 +11,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.rmi</groupId>
-			<artifactId>boot-rmi-costomer-common-starter</artifactId>
+			<artifactId>spring-boot-rmi-costomer-common-starter</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
