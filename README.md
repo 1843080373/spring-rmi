@@ -1,5 +1,5 @@
-# spring-boot-rmi-starter使用指南，源代码详细见https://github.com/blue19demon/spring-boot-rmi-starter
-# spring-boot-rmi-starter使用demo见https://github.com/blue19demon/spring-rmi/tree/master/boot-rmi-starter-release-demo
+#### spring-boot-rmi-starter使用指南，源代码详细见https://github.com/blue19demon/spring-boot-rmi-starter
+#### spring-boot-rmi-starter使用demo见https://github.com/blue19demon/spring-rmi/tree/master/boot-rmi-starter-release-demo
 #### How to get a Git project into your build:
 #### Step 1. Add the JitPack repository to your build file
 	<repositories>
@@ -25,7 +25,7 @@
 			<groupId>com.github.blue19demon.spring-boot-rmi-starter</groupId>
 			<artifactId>spring-boot-rmi-costomer-starter</artifactId>
 			<version>2.0.0.RELEASE</version>
-		</dependency>
+	</dependency>
 #### Share this release:
 
 #### TweetLink
