@@ -21,7 +21,7 @@
 			<artifactId>spring-boot-rmi-provider-starter</artifactId>
 			<version>2.0.0.RELEASE</version>
 		</dependency>
-			<dependency>
+		<dependency>
 			<groupId>com.rmi</groupId>
 			<artifactId>boot-rmi-starter-release-demo-api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
