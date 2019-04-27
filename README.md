@@ -68,6 +68,6 @@
 			System.out.println(userRemoteService.save(user));
 		}
 	}
-#### 远程调用接口suucess！！！
+#### 远程调用接口success！！！
 #### 第一次请求项目时，JitPack会检查代码，构建它并提供构建工件（jar，aar）。
 #### 如果项目没有任何GitHub版本，您可以使用短提交哈希或'master-SNAPSHOT'作为版本。
