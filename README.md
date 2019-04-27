@@ -1,5 +1,6 @@
-#### spring-boot-rmi-starter使用指南，源代码详细见https://github.com/blue19demon/spring-boot-rmi-starter
+#### spring-boot-rmi-starter源代码详细见https://github.com/blue19demon/spring-boot-rmi-starter
 #### spring-boot-rmi-starter使用demo见https://github.com/blue19demon/spring-rmi/tree/master/boot-rmi-starter-release-demo
+## 2.0.0.RELEASE版本使用指南		
 #### 要将Git项目放入您的构建中：
 #### 步骤1.将JitPack存储库添加到构建文件中
 	<repositories>
@@ -53,6 +54,59 @@
 			SpringApplication.run(CostomerApplication.class, args);
 		} 
 	}
+#### 启动provider项目，发布RMI接口
+#### costomer调用
+	@RunWith(SpringJUnit4ClassRunner.class)
+	@SpringBootTest(classes={CostomerApplication.class})
+	public class RmiCostomerTester {
+		@Autowired
+		private HelloRemoteService helloRemoteService;
+		@Autowired
+		private UserRemoteService userRemoteService;
+		@Test
+		public void test() {
+			System.out.println(helloRemoteService.say("张三年"));
+			System.out.println(userRemoteService.save(user));
+		}
+	}
+#### 远程调用接口success！！！
+## 2.0.1.RELEASE版本使用起来更加便捷，使用指南如下
+#### 步骤1. provider 添加依赖项
+	<dependency>
+		<groupId>com.github.blue19demon.spring-boot-rmi-starter</groupId>
+		<artifactId>spring-boot-rmi-provider-starter</artifactId>
+		<version>2.0.1.RELEASE</version>
+	</dependency>
+#### 步骤2. costomer 添加依赖项
+	<dependency>
+		<groupId>com.github.blue19demon.spring-boot-rmi-starter</groupId>
+		<artifactId>spring-boot-rmi-costomer-starter</artifactId>
+		<version>2.0.1.RELEASE</version>
+	</dependency>
+#### 步骤5.项目中的使用
+#### provider 项目实现接口，添加注解
+	@RemoteService
+	public class HelloWSService implements HelloRemoteService {
+		public String say(String name) {
+			return "hello "+name;
+		}
+	}
+##### application.yml上下文配置文件中新增如下内容，配置服务端暴露接口信息（目前版本只支持放在classpath路径下的文件名一致的文件）
+	rmi:
+          port: 1009
+#### costomer 项目主启动类上新增注解
+	@SpringBootApplication
+	@EnableAutoRemoteLookup
+	public class CostomerApplication {
+		public static void main(String[] args) {
+			SpringApplication.run(CostomerApplication.class, args);
+		} 
+	}
+##### application.yml上下文配置文件中新增如下内容，配置客户端lookup接口信息（目前版本只支持放在classpath路径下的文件名一致的文件）
+	rmi:
+	  url: 127.0.0.1:1009
+	  remoteClientScan:
+	    basePackages: com.rmi.api
 #### 启动provider项目，发布RMI接口
 #### costomer调用
 	@RunWith(SpringJUnit4ClassRunner.class)
