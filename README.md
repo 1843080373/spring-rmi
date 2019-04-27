@@ -87,7 +87,7 @@
 		<artifactId>spring-boot-rmi-costomer-starter</artifactId>
 		<version>2.0.1.RELEASE</version>
 	</dependency>
-#### 步骤5.项目中的使用
+#### 步骤3.项目中的使用
 #### provider 项目实现接口，添加注解
 	@RemoteService
 	public class HelloWSService implements HelloRemoteService {
