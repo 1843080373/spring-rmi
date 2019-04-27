@@ -8,11 +8,4 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>boot-rmi-starter01-api</artifactId>
-	<dependencies>
-		<dependency>
-			<groupId>com.rmi</groupId>
-			<artifactId>spring-boot-rmi-costomer-common-starter</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
 </project>
