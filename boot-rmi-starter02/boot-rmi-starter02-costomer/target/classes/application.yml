@@ -1,2 +1,6 @@
 server:
   port: 81
+rmi:
+  url: 127.0.0.1:1234 
+  remoteClientScan:
+    basePackages: com.rmi.api

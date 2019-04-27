@@ -18,6 +18,4 @@ import org.springframework.stereotype.Component;
 public @interface RemoteService {
 
     ServiceType serviceType() default ServiceType.RMI;
-
-    Class<?> serviceInterface();
 }
