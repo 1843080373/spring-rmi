@@ -19,7 +19,7 @@
 		<dependency>
 			<groupId>com.github.blue19demon.spring-boot-rmi-starter</groupId>
 			<artifactId>spring-boot-rmi-provider-starter</artifactId>
-			<version>2.0.0.RELEASE</version>
+			<version>2.0.1.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>com.rmi</groupId>
