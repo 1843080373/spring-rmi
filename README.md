@@ -2,7 +2,15 @@
 #### spring-boot-rmi-starter源代码详细见https://github.com/blue19demon/spring-boot-rmi-starter/tree/01c860b3458bcbf59e79f4462ae9b0b45d289f9e
 #### spring-boot-rmi-starter使用demo见https://github.com/blue19demon/spring-rmi/tree/bf80a30b07b2a787ddda842b347997ff883d4e27/boot-rmi-starter-release-demo
 
-#### 步骤1. provider 添加依赖项
+#### 步骤1. 
+#### 将JitPack存储库添加到构建文件中
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+#### provider 添加依赖项
 	<dependency>
 		<groupId>com.github.blue19demon.spring-boot-rmi-starter</groupId>
 		<artifactId>spring-boot-rmi-provider-starter</artifactId>
